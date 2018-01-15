@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        /*8.1*/
+        var persoana = {
+            nume:"Gabriela Boboc",
+            varsta: 50,
+            calitati:["frumoasa","grasa"]
+        };
+        console.log("Nume: ",persoana.nume);
+        console.log("Varsta: ",persoana.varsta);
+        console.log("Calitati:");
+        for(var i = 0; i < persoana.calitati.length; i++)
+        {
+            console.log(persoana.calitati[i]);
+        }
+        /*8.2*/
+        var film ={
+            titlu: new String,
+            durata: new Number,
+            actori: [],
+        }
+        function newFilm (t,d,a){
+            film.titlu = t;
+            film.durata = d;
+            film.actori = a;
+        }
+        newFilm("Moara cu noroc", 130,["George","Radu"]);
+
+        function afisare(f){
+            console.log("\"" + f.titlu+"\""+" a durat "+f.durata+" minute. Actori: ");
+            for(var i = 0; i <f.actori.length; i++)
+            {
+                console.log(f.actori[i]);
+            }
+        }
+
+        afisare(film);
+        /*8.3*/
+        // Input
+        var blackFridayCart = {
+        telefon: "350",
+        consola: "250",
+        televizor: "450",
+        iepurasPlus: "10.60",
+        cercei: "20.34",
+        geanta: "22.36"
+        };
+
+        // Output
+        // 1103.3
+
+        function getCartValue(cart){
+            var suma = 0;
+
+            suma = parseFloat(cart.telefon)+parseFloat(cart.consola)+parseFloat(cart.geanta);
+            suma = suma +parseFloat(cart.televizor)+parseFloat(cart.iepurasPlus)+parseFloat(cart.cercei); 
+
+            console.log(suma);   
+
+        }
+        getCartValue(blackFridayCart); 
+
+        /*8.4*/
+        function multiplicator(element){
+            return 2 * element;
+        }
+        
+        function map(fct){
+            for(var i = 0; i < this.length; i++)
+            {
+                this[i] = fct(this[i]);
+            }
+        }
+        var vector = [1,2,3].map(multiplicator);
+        console.log(vector);
+    
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
